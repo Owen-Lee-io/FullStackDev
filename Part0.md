@@ -66,11 +66,16 @@ end note
 
 title creates a new note using the single-page
 
-browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa 
-browser->server:JSON [{ content: "SAP submit"date: "2023-06-05T12:34:57.194Z", ...]
+note over browser: 
+update DOM with JSON 
+[{ content: "SAP submit"date: 
+"2023-06-05T12:34:57.194Z", ...]
+end note
 
-server-->browser: 201
-![image](https://github.com/Owen-Lee-io/FullStackDev/assets/47958868/5810301a-ee51-498a-a61d-fe2a42c16e9a)
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa 
+server-->browser: 201 resource create success 
+![image](https://github.com/Owen-Lee-io/FullStackDev/assets/47958868/b0a0ddb4-afbe-40d0-9980-a63dd5bef5ce)
+
 
 
 
